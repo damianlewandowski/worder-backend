@@ -2,7 +2,7 @@ import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 import { Language } from './models/language.model';
 import { LanguageService } from './language.service';
 
-@Controller('language')
+@Controller('languages')
 export class LanguageController {
   constructor(
     private languageService: LanguageService,
@@ -16,5 +16,10 @@ export class LanguageController {
   @Get(':id')
   getLanguage(@Param() id: number): Promise<any> {
     return this.languageService.getLanguage(id);
+  }
+
+  @Get('')
+  findAll(): Promise<any> {
+    return this.languageService.findAll();
   }
 }

@@ -17,10 +17,10 @@ export class WordService {
 
   getWord(id: number): Promise<any> {
     return this.wordRepository
-      .createQueryBuilder('word')
-      .where('word.id = :id', { id })
-      .leftJoin('word.definiteThe', 'definiteThe')
-      .leftJoin('word.definiteA', 'definiteA')
+      .createQueryBuilder('words')
+      .where('words.id = :id', { id })
+      .leftJoin('words.definiteThe', 'definiteThe')
+      .leftJoin('words.definiteA', 'definiteA')
       .addSelect(['definiteThe.literal', 'definiteA.literal'])
       .getOne();
   }

@@ -1,5 +1,5 @@
 import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from 'typeorm';
-import { Word } from '../../word/models/word.model';
+import { Word } from '../../words/models/word.model';
 
 @Entity()
 export class DefiniteThe {

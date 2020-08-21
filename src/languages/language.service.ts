@@ -19,4 +19,8 @@ export class LanguageService {
   getLanguage(id: number): Promise<any> {
     return this.languageRepository.findOne(id, {relations: ['words']});
   }
+
+  findAll(): Promise<any> {
+    return this.languageRepository.find();
+  }
 }

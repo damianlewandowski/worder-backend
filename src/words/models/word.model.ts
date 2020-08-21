@@ -1,5 +1,5 @@
 import { Entity, Column, PrimaryGeneratedColumn, OneToMany, JoinColumn, ManyToOne } from 'typeorm';
-import { Language } from '../../language/models/language.model';
+import { Language } from '../../languages/models/language.model';
 import { DefiniteThe } from '../../definite/models/definite-the.model';
 import { DefiniteA } from '../../definite/models/definite-a.model';
 

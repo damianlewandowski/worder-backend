@@ -3,7 +3,7 @@ import { DefiniteService } from './definite.service';
 import { CreateDefiniteTheDto } from './dto/create-definite-the.dto';
 import { CreateDefiniteADto } from './dto/create-definite-a.dto';
 
-@Controller('definite')
+@Controller('definites')
 export class DefiniteController {
   constructor(
     private definiteService: DefiniteService,

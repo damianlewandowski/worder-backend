@@ -15,7 +15,6 @@ export class WordController {
 
   @Get(':id')
   getWord(@Param('id') id: number): Promise<any> {
-    console.log(id);
     return this.wordService.getWord(id);
   }
 }

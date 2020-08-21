@@ -5,7 +5,8 @@ export class User {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({ nullable: false })
+  // This is not a PK to keep consistency (numerical id is a PK everywhere else)
+  @Column({ nullable: false, unique: true })
   email: string;
 
   @Column({ default: true })
